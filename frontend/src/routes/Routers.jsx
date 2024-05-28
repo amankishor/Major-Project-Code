@@ -9,7 +9,7 @@ import DoctorsDetails from '../pages/Doctors/DoctorsDetails';
 import MyAccount from '../Dashboard/user-account/MyAccount';
 import Dashboard from '../Dashboard/doctor-account/Dashboard';
 import ProtectedRoute from './ProtectedRoute';
-
+import Selecr from '../components/Stepp/Selecr';
 
 import {Routes,Route} from "react-router-dom";
 
@@ -19,6 +19,7 @@ const Routers = () => {
       <Route path ="/" element ={<Home/>}/>
       <Route path ="/home" element ={<Home/>}/>
       <Route path ="/doctors" element ={<Doctors/>}/>
+      <Route path ="/sele" element ={<Selecr/>}/>
       <Route path ="/doctors/:id" element ={<DoctorsDetails/>}/>
       <Route path ="/login" element ={<Login/>}/>
       <Route path ="/register" element ={<Signup/>}/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect,useRef ,useContext} from 'react';
 import logo from "../../assets/images/logo.png";
+import logou from "../../assets/images/logou1.png"
 
 import { NavLink ,Link } from 'react-router-dom';
 import {BiMenu}  from "react-icons/bi";
@@ -13,17 +14,21 @@ const navLinks =[
     path:"/home",
     display:'Home'
   },
+  // {
+  //   path:"/doctors",
+  //   display:'Find a Doctor'
+  // },
   {
-    path:"/doctors",
-    display:'Find a Doctor'
+    path:"/sele",
+    display:'Service'
   },
   {
     path:"/services",
-    display:'services'
+    display:'Researches'
   },
   {
     path:"/contact",
-    display:'contact'
+    display:'Contact'
   },
 ]
 
@@ -54,7 +59,7 @@ const Header = () => {
         <div className='flex items-center justify-between'>
           
           <div>
-            <img src={logo} alt =""/>
+            <img src={logou} alt ="" style={{height:40, width:120}}/>
           </div>
                     {/* menu */}
           <div className='navigation' ref={menuRef} onClick={toggleMenu}>

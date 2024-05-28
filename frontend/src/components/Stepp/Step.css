@@ -1,0 +1,51 @@
+.step-progress-bar {
+  display: flex;
+  flex-direction: row; /* Keep as row to ensure steps are aligned in a straight line */
+  align-items: center;
+  margin-top: 50px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 90px; /* Add margin-right to create space between steps */
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  text-align: center;
+}
+
+.not-complete .step-number {
+  background-color: #ddd;
+}
+
+.complete .step-number {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .step-progress-bar {
+    flex-direction: column; /* Change to column for smaller screens */
+  }
+
+  .step {
+    margin-right: 0; /* Remove margin-right for smaller screens */
+    margin-bottom: 20px; /* Add margin-bottom for smaller screens */
+  }
+}

@@ -13,7 +13,7 @@ const MyBookings = () => {
     <div>
       {loading && !error && <Loading />}
       {error && !loading && <Error errMessage={error} />}
-
+  
       {!loading && !error && appointments && appointments.length > 0 && (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
           {appointments.map(doctor => (
@@ -22,7 +22,7 @@ const MyBookings = () => {
         </div>
       )}
 
-      {!loading && !error && appointments.length === 0 && (
+      {!loading && !error && appointments.length === 0 && (  
         <h2 className='mt-5 text-center text-headingColor leading-7 text-[20px] font-semibold text-primaryColor'>No appointments booked by you yet!</h2>
       )}
     </div>
@@ -30,3 +30,4 @@ const MyBookings = () => {
 };
 
 export default MyBookings;
+
